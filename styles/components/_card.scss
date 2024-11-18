@@ -1,0 +1,56 @@
+.card {
+  background-color: $grey-800;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: px-to-rem(24); // 24 / 14
+  gap: 24px;
+
+  width: 100%;
+
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .avatar { // & .avatar -> .card .avatar
+    order: 1;
+  }
+
+  &__header { // .card__header
+    order: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: px-to-rem(24);
+  }
+  &__location {
+    font-weight: 700;
+    color: $green;
+  }
+
+  &__bio {
+    order: 3;
+  }
+
+  .socials {
+    order: 4;
+  }
+
+  @include tablet {
+    max-width: 456px;
+  }
+  @include desktop {
+    max-width: 384px;
+  }
+}
